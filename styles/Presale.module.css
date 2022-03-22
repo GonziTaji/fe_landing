@@ -1,0 +1,16 @@
+.sobre {
+    animation: bounce 3s infinite;
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(5%);
+            animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+        }
+        50% {
+            transform: translateY(0);
+            animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+        }
+    }
+
+    @apply skew-y-6;
+}
