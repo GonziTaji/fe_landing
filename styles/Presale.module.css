@@ -3,14 +3,29 @@
 
     @keyframes bounce {
         0%, 100% {
-            transform: translateY(5%);
+            transform: translateY(3%);
             animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
         }
         50% {
-            transform: translateY(0);
+            transform: translateY(-3%);
             animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
         }
     }
+}
 
-    @apply skew-y-6;
+.btnMint {
+    box-shadow: 2px 2px 20px 0px #5C1C18
+}
+
+.test {
+    height: 200px;
+    width: 500px;
+    background-color: red;
+    background-image: url('../public/static/shuriken.png');
+    
+    @font-face {
+        font-family: 'Linux ';
+        src: url('../public/static/fonts/linux_libertine/LinLibertine_R.ttf');
+    }
+    
 }

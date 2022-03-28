@@ -210,19 +210,18 @@ class Web3ContextProvider extends Component<any, Web3ContextProviderState> {
             <Web3Context.Provider value={context}>
                 {this.props.children}
 
-                <Modal
-                    content={
+                <Modal show={this.state.connecting}>
+                    <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                         <span className="block text-center">
                             Waiting for connection with web3 provider...
                         </span>
-                    }
-                    buttons={
+                    </div>
+                    <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                         <button className="border-2 border-red-900 p-2 bg-red-600 text-white rounded" onClick={this.hideModal}>
                             Hide
                         </button>
-                    }
-                    show={this.state.connecting}
-                ></Modal>
+                    </div>
+                </Modal>
             </Web3Context.Provider>
         )
     }

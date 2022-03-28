@@ -1,8 +1,7 @@
-interface ModalProps {
-    content: JSX.Element | string;
-    buttons?: JSX.Element;
+export interface ModalProps {
     show: boolean;
-    onHide?: () => void
+    onHide?: () => void;
+    children?: React.ReactNode
 }
 
 export const Modal = (props: ModalProps) => {
@@ -70,12 +69,7 @@ export const Modal = (props: ModalProps) => {
                     ${!props.show && 'opacity-0'}
                 `}
                 >
-                    <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        { props.content }
-                    </div>
-                    <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                        { props.buttons }
-                    </div>
+                    {props.children}
                 </div>
             </div>
         </div>
